@@ -1,0 +1,24 @@
+{
+  "name": "rn-searchable-textinput",
+  "version": "0.1.0",
+  "description": "Searchable text input component which can be fully customized.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratik8442/rn-searchable-textinput.git"
+  },
+  "keywords": [
+    "text-search",
+    "text-input-search",
+    "searchable-textinput"
+  ],
+  "author": "Pratik Sanap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pratik8442/rn-searchable-textinput/issues"
+  },
+  "homepage": "https://github.com/pratik8442/rn-searchable-textinput#readme"
+}

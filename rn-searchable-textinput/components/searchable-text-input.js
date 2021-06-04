@@ -35,10 +35,8 @@ const SearchableTextInput = (props) => {
   const handleOnChangeText = (changedTextValue) => {
     return props.handleOnChangeText(changedTextValue);
   };
-  const FlatListSeparator = () => {
-    return (
-      <View style={[styles.flatListSeparator, props.flatListSeparatorStyle]} />
-    );
+  const listSeparator = () => {
+    return <View style={[styles.listSeparator, props.listSeparatorStyle]} />;
   };
   return (
     <SafeAreaView style={styles.safeAreaView}>
@@ -54,7 +52,7 @@ const SearchableTextInput = (props) => {
         </View>
         <FlatList
           data={filteredCompany.slice(0, 5)}
-          ItemSeparatorComponent={FlatListSeparator}
+          ItemSeparatorComponent={listSeparator}
           style={styles.flatList}
           keyExtractor={(item) => item}
           maxToRenderPerBatch={1}
@@ -87,7 +85,7 @@ const styles = StyleSheet.create({
     width: 300,
     padding: 10,
   },
-  flatListSeparator: {
+  listSeparator: {
     borderWidth: 0.3,
     borderColor: "#DEDDE3",
     height: 1,
