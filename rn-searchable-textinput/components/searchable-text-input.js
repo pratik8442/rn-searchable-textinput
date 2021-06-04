@@ -6,32 +6,33 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  Platform,
   SafeAreaView,
 } from "react-native";
 const SearchableTextInput = (props) => {
   const [changedText, onChangeText] = useState("");
-  const [filteredCompany, setFilteredCompany] = useState([]);
-
-  //NOTE: code for text input with search
-  const findCompany = (query) => {
+  const [filteredTextInArray, setFilteredTextInArray] = useState([]);
+  //NOTE: search the text entered in text-input and filter the array
+  const findTextInArray = (query) => {
+    //NOTE: avoid special char in text-input
     let filterdTextInput = query.replace(
       /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
       ""
     );
+    //NOTE: putting user enterd value in text-input
     onChangeText(filterdTextInput);
+    //NOTE: filter the array with text entered by user
     if (filterdTextInput.length) {
       const regex = new RegExp(`${filterdTextInput.trim()}`, "i");
-      setFilteredCompany(
+      setFilteredTextInArray(
         props.arrayWithSetOfValue.filter(
           (companyName) => companyName.search(regex) >= 0
         )
       );
     } else {
-      setFilteredCompany([]);
+      setFilteredTextInArray([]);
     }
   };
-
+  //NOTE: callback function to give user entered value to parent controller
   const handleOnChangeText = (changedTextValue) => {
     return props.handleOnChangeText(changedTextValue);
   };
@@ -44,14 +45,14 @@ const SearchableTextInput = (props) => {
         <View>
           <TextInput
             placeholder={props.placeholder}
-            onChangeText={(text) => findCompany(text)}
+            onChangeText={(text) => findTextInArray(text)}
             value={(handleOnChangeText(changedText), changedText)}
             autoFocus={true}
             style={[styles.autoCompleteResultText, props.textInputStyle]}
           />
         </View>
         <FlatList
-          data={filteredCompany.slice(0, 5)}
+          data={filteredTextInArray.slice(0, 5)}
           ItemSeparatorComponent={listSeparator}
           style={styles.flatList}
           keyExtractor={(item) => item}
@@ -61,7 +62,7 @@ const SearchableTextInput = (props) => {
             <TouchableOpacity
               onPress={() => {
                 onChangeText(item);
-                setFilteredCompany([]);
+                setFilteredTextInArray([]);
               }}
             >
               <View style={styles.flatListView}>

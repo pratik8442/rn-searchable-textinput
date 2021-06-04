@@ -4,6 +4,18 @@ Text-input component with search functionality.
 For users who wants to show multiple search result to the user.
 e.g Search for the near by restrurents.
 
+## Install
+
+### For npm
+
+`npm i rn-searchable-textinput`
+
+### For yarn
+
+`yarn add rn-searchable-textinput`
+
+![Image of Yaktocat](https://github.com/pratik8442/image-resources/blob/main/rn-searchable-text-input.gif?raw=true)
+
 ## Table of content
 
 1. What is Searchable Text-input
@@ -41,5 +53,6 @@ This searchable text-input is fully customizable.
    6. `listSeparatorStyle={{ borderColor: "#dfeeea" }}` // styling for list separator
    7. `searchTextStyle={{ fontSize: 15 }}`// styling for search text
 
-### 4. Feedback
+### 4. Feedback & Query
+
 For any help or feedback you can write email @ pratiksanap007@gmail.com

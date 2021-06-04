@@ -1,6 +1,6 @@
 {
   "name": "rn-searchable-textinput",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Searchable text input component which can be fully customized.",
   "main": "index.js",
   "scripts": {
