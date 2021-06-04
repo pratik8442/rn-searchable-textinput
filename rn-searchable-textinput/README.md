@@ -9,6 +9,7 @@ e.g Search for the near by restrurents.
 1. What is Searchable Text-input
 2. Why to use this package
 3. Getting Started
+4. Feedback
 
 ### 1. What is Searchable Text-input
 
@@ -39,3 +40,6 @@ This searchable text-input is fully customizable.
    5. `textInputStyle={{ backgroundColor: "#a7c4bc" }}` //if required pass the desired styling for textInput
    6. `listSeparatorStyle={{ borderColor: "#dfeeea" }}` // styling for list separator
    7. `searchTextStyle={{ fontSize: 15 }}`// styling for search text
+
+### 4. Feedback
+For any help or feedback you can write email @ pratiksanap007@gmail.com
